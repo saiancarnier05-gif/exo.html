@@ -1,0 +1,16 @@
+<script>
+let N = parseInt(prompt("Limite supérieure : "));
+let i, diviseur;
+
+for (i = 2; i <= N; i++) {
+    diviseur = 2;
+
+    while ((i % diviseur !== 0) && (diviseur < i)) {
+        diviseur = diviseur + 1;
+    }
+
+    if (diviseur === i) {
+        alert(i + " est un nombre premier");
+    }
+}
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta chartset="UTF-8">
+    <title>Deux big Zeub</title>
+    <link rel="stylesheet" href="styles.css">
+<script>
+function afficherDateHeure() {
+    const maintenant = new Date();
+
+    const optionsDate = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+
+    const date = maintenant.toLocaleDateString('fr-FR', optionsDate);
+    const heure = maintenant.toLocaleTimeString('fr-FR');
+
+    document.getElementById("demo").innerHTML = 
+        date + " - " + heure;
+}
+setInterval(afficherDateHeure, 1000);
+afficherDateHeure();
+</script>
+<body>
+    <h1 class="titre">SKRILLA</h1>
+    <div class="barre"></div>
+    <h2>Saian Carnier</h2>
+    <p id="demo"></p>
+    <img width="660" height="415"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZoBIl7-5k7-Z1LemyneYzg6Ovq-Vs7-UOmILX5LHqyfwr2B6XBaeTRshllHJziPk7dNT9zY33T_V8DP_Ay0ga0hhwszvEuqoi-UrY-2g4&s=10">
+  <iframe width="660" height="415"src="https://www.youtube.com/embed/LLdRjTmZTBE?si=HsZ7VO0XqVuYqdeS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+   <div class="meteo">
+    <h2>Météo</h2>
+    <p id="ville"></p>
+    <p id="temperature"></p>
+    <p id="description"></p>
+    </div>
+   <h2>Taux Euro / Dollar</h2>
+
+<p id="taux">Chargement du taux...</p>
+
+<p id="resultat"></p>
+  <h3>Jeu de la dichotomie</h3>
+<div class="bloc">
+<p>Choisissez un nombre entre 1 et 100 avec le slider.</p>
+<input type="range" id="slider-jeu" min="1" max="100" value="50">
+<p>Valeur choisie : <span id="valeur-slider">50</span></p>
+<p id="resultat-jeu"></p>
+</div>
+
+  
+</body>
+</html>
